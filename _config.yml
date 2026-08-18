@@ -1,6 +1,8 @@
 title: Network Engineering
 description: Data Center / Service Provider / Network Automation
 
-theme: dark
+theme: minima
+minima:
+  skin: dark
 
 permalink: /posts/:title/
