@@ -3,9 +3,358 @@ layout: default
 title: Home
 ---
 
-<!-- =========================
-     HERO
-========================= -->
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+  background: #080808;
+}
+
+body {
+  background: #080808 !important;
+  color: #f5f5f5 !important;
+}
+
+.page-content {
+  background: #080808 !important;
+  padding-top: 0;
+}
+
+.wrapper {
+  max-width: 1150px;
+}
+
+/* Minima Header */
+
+.site-header {
+  background: rgba(8, 8, 8, 0.95) !important;
+  border-bottom: 1px solid #242424 !important;
+}
+
+.site-title,
+.site-title:visited {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.site-nav {
+  background: #080808 !important;
+}
+
+.site-nav .page-link {
+  color: #aaaaaa !important;
+}
+
+.site-nav .page-link:hover {
+  color: #7cff6b !important;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #080808 !important;
+  border-top: 1px solid #242424 !important;
+  color: #777 !important;
+}
+
+.site-footer a {
+  color: #aaa !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.hero-badge {
+  color: #7cff6b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 0 0 30px;
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: #666666;
+}
+
+.hero-description {
+  font-size: 20px;
+  color: #eeeeee;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  color: #999999;
+  max-width: 650px;
+  font-size: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+  padding: 12px 22px;
+  border-radius: 7px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.button.primary {
+  background: #7cff6b;
+  color: #080808 !important;
+}
+
+.button.primary:hover {
+  transform: translateY(-2px);
+  background: #91ff82;
+}
+
+.button.secondary {
+  border: 1px solid #333333;
+  background: #111111;
+  color: #ffffff !important;
+}
+
+.button.secondary:hover {
+  border-color: #666666;
+  background: #181818;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  padding: 90px 0;
+  border-top: 1px solid #222222;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.section-title span {
+  color: #7cff6b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: #111111;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  padding: 28px;
+  min-height: 170px;
+  transition: 0.25s;
+}
+
+.card:hover {
+  background: #161616;
+  border-color: #444444;
+  transform: translateY(-4px);
+}
+
+.card-number {
+  color: #7cff6b;
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  color: #ffffff;
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.card p {
+  color: #999999;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+  border-top: 1px solid #222222;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 60px 1fr 40px;
+  align-items: center;
+  padding: 30px 10px;
+  border-bottom: 1px solid #222222;
+
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+  transition: 0.2s;
+}
+
+.project:hover {
+  background: #0e0e0e;
+  padding-left: 20px;
+}
+
+.project-index {
+  color: #666666;
+  font-size: 12px;
+}
+
+.project-content h3 {
+  color: #ffffff;
+  margin: 0 0 7px;
+  font-size: 23px;
+}
+
+.project-content p {
+  color: #999999;
+  margin: 0 0 14px;
+}
+
+.project-arrow {
+  color: #7cff6b;
+  font-size: 24px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tags span {
+  border: 1px solid #333333;
+  padding: 4px 9px;
+  border-radius: 20px;
+  color: #aaaaaa;
+  font-size: 11px;
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+.articles {
+  border-top: 1px solid #222222;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #222222;
+  padding: 22px 10px;
+
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+  transition: 0.2s;
+}
+
+.article:hover {
+  padding-left: 20px;
+  background: #0d0d0d;
+}
+
+.article-date {
+  font-size: 11px;
+  color: #666666;
+}
+
+.article h3 {
+  margin: 4px 0 0;
+  color: #ffffff;
+}
+
+.article-arrow {
+  color: #7cff6b;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .project {
+    grid-template-columns: 40px 1fr 25px;
+  }
+
+}
+
+</style>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -23,20 +372,19 @@ title: Home
   </p>
 
   <p class="hero-text">
-    Network architecture, troubleshooting, validation and automation.
-    <br>
-    Building reliable and observable network infrastructure.
+    Network architecture, troubleshooting, validation
+    and automation for reliable infrastructure.
   </p>
 
   <div class="hero-actions">
 
-    <a href="{{ '/projects/' | relative_url }}" class="button primary">
+    <a href="{{ '/projects/' | relative_url }}"
+       class="button primary">
       View Projects
     </a>
 
     <a href="https://github.com/w2jay"
        target="_blank"
-       rel="noopener noreferrer"
        class="button secondary">
       GitHub ↗
     </a>
@@ -46,57 +394,63 @@ title: Home
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- AREAS -->
 
 <section class="section">
 
   <div class="section-title">
     <span>01</span>
-    <h2>About</h2>
+    <h2>Areas of Interest</h2>
   </div>
 
-  <div class="about-grid">
+  <div class="cards">
 
-    <div class="about-main">
-
-      <h3>
-        Network engineering focused on
-        infrastructure reliability and troubleshooting.
-      </h3>
-
+    <div class="card">
+      <div class="card-number">01</div>
+      <h3>Routing & Switching</h3>
       <p>
-        This site documents network architectures,
-        technical validation, troubleshooting cases
-        and automation projects.
+        BGP, OSPF, STP, HSRP, VRRP and routing architectures.
       </p>
-
-      <p>
-        The goal is not only to record configurations,
-        but to understand how the control plane,
-        data plane and failure scenarios actually behave.
-      </p>
-
     </div>
 
-    <div class="about-info">
+    <div class="card">
+      <div class="card-number">02</div>
+      <h3>Data Center Network</h3>
+      <p>
+        Cisco Nexus, vPC, ACI and highly available architectures.
+      </p>
+    </div>
 
-      <div class="info-item">
-        <span>FOCUS</span>
-        <strong>Data Center Network</strong>
-      </div>
+    <div class="card">
+      <div class="card-number">03</div>
+      <h3>VXLAN EVPN</h3>
+      <p>
+        BGP EVPN control plane, VXLAN Fabric and Multi-Site.
+      </p>
+    </div>
 
-      <div class="info-item">
-        <span>NETWORK</span>
-        <strong>Routing / Switching</strong>
-      </div>
+    <div class="card">
+      <div class="card-number">04</div>
+      <h3>Network Automation</h3>
+      <p>
+        Python, REST API, NETCONF and RESTCONF.
+      </p>
+    </div>
 
-      <div class="info-item">
-        <span>AUTOMATION</span>
-        <strong>Python / API / Telemetry</strong>
-      </div>
+    <div class="card">
+      <div class="card-number">05</div>
+      <h3>Observability</h3>
+      <p>
+        Telemetry, Prometheus, Grafana and monitoring.
+      </p>
+    </div>
 
+    <div class="card">
+      <div class="card-number">06</div>
+      <h3>Troubleshooting</h3>
+      <p>
+        Packet analysis, failure reproduction and root-cause isolation.
+      </p>
     </div>
 
   </div>
@@ -104,197 +458,29 @@ title: Home
 </section>
 
 
-<!-- =========================
-     AREAS OF INTEREST
-========================= -->
+<!-- PROJECTS -->
 
 <section class="section">
 
   <div class="section-title">
     <span>02</span>
-    <h2>Areas of Interest</h2>
+    <h2>Selected Projects</h2>
   </div>
-
-
-  <div class="cards">
-
-    <div class="card">
-
-      <div class="card-number">
-        01
-      </div>
-
-      <h3>
-        Routing & Switching
-      </h3>
-
-      <p>
-        BGP, OSPF, STP, HSRP, VRRP and
-        enterprise/service provider routing architectures.
-      </p>
-
-      <div class="card-tags">
-        BGP · OSPF · STP
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <div class="card-number">
-        02
-      </div>
-
-      <h3>
-        Data Center Network
-      </h3>
-
-      <p>
-        High availability and scalable data center
-        network architectures.
-      </p>
-
-      <div class="card-tags">
-        Nexus · vPC · ACI
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <div class="card-number">
-        03
-      </div>
-
-      <h3>
-        VXLAN EVPN
-      </h3>
-
-      <p>
-        BGP EVPN control plane,
-        VXLAN fabric and Multi-Site architecture.
-      </p>
-
-      <div class="card-tags">
-        VXLAN · EVPN · BGP
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <div class="card-number">
-        04
-      </div>
-
-      <h3>
-        Network Automation
-      </h3>
-
-      <p>
-        Network configuration, state collection
-        and workflow automation.
-      </p>
-
-      <div class="card-tags">
-        Python · REST API · NETCONF
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <div class="card-number">
-        05
-      </div>
-
-      <h3>
-        Observability
-      </h3>
-
-      <p>
-        Infrastructure metrics,
-        telemetry and network monitoring.
-      </p>
-
-      <div class="card-tags">
-        Grafana · Prometheus · Telegraf
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <div class="card-number">
-        06
-      </div>
-
-      <h3>
-        Troubleshooting
-      </h3>
-
-      <p>
-        Failure reproduction,
-        packet analysis and root-cause isolation.
-      </p>
-
-      <div class="card-tags">
-        Packet · Flow · RCA
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     SELECTED PROJECTS
-========================= -->
-
-<section class="section">
-
-  <div class="section-title section-title-row">
-
-    <div>
-      <span>03</span>
-      <h2>Selected Projects</h2>
-    </div>
-
-    <a href="{{ '/projects/' | relative_url }}"
-       class="section-link">
-      View all →
-    </a>
-
-  </div>
-
 
   <div class="projects">
-
 
     <a href="{{ '/projects/' | relative_url }}"
        class="project">
 
-      <div class="project-index">
-        01
-      </div>
+      <div class="project-index">01</div>
 
       <div class="project-content">
 
-        <h3>
-          VXLAN EVPN Multi-Site
-        </h3>
+        <h3>VXLAN EVPN Multi-Site</h3>
 
         <p>
-          VXLAN EVPN fabric architecture,
-          BGP EVPN control plane and
-          Multi-Site behavior validation.
+          Architecture and BGP EVPN
+          control-plane validation.
         </p>
 
         <div class="tags">
@@ -306,9 +492,7 @@ title: Home
 
       </div>
 
-      <div class="project-arrow">
-        ↗
-      </div>
+      <div class="project-arrow">↗</div>
 
     </a>
 
@@ -316,33 +500,26 @@ title: Home
     <a href="{{ '/projects/' | relative_url }}"
        class="project">
 
-      <div class="project-index">
-        02
-      </div>
+      <div class="project-index">02</div>
 
       <div class="project-content">
 
-        <h3>
-          vPC / LACP Failure Analysis
-        </h3>
+        <h3>vPC / LACP Failure Analysis</h3>
 
         <p>
-          Failure scenario reproduction and analysis
-          of vPC, LACP System ID and timer behavior.
+          Failure scenario reproduction and
+          LACP behavior analysis.
         </p>
 
         <div class="tags">
           <span>vPC</span>
           <span>LACP</span>
-          <span>Nexus</span>
           <span>Troubleshooting</span>
         </div>
 
       </div>
 
-      <div class="project-arrow">
-        ↗
-      </div>
+      <div class="project-arrow">↗</div>
 
     </a>
 
@@ -350,33 +527,26 @@ title: Home
     <a href="{{ '/projects/' | relative_url }}"
        class="project">
 
-      <div class="project-index">
-        03
-      </div>
+      <div class="project-index">03</div>
 
       <div class="project-content">
 
-        <h3>
-          Network Observability Stack
-        </h3>
+        <h3>Network Observability Stack</h3>
 
         <p>
-          Infrastructure monitoring and telemetry
-          using Telegraf, Prometheus and Grafana.
+          Network monitoring using
+          Telegraf, Prometheus and Grafana.
         </p>
 
         <div class="tags">
           <span>Telemetry</span>
           <span>Grafana</span>
           <span>Prometheus</span>
-          <span>Telegraf</span>
         </div>
 
       </div>
 
-      <div class="project-arrow">
-        ↗
-      </div>
+      <div class="project-arrow">↗</div>
 
     </a>
 
@@ -385,14 +555,12 @@ title: Home
 </section>
 
 
-<!-- =========================
-     LATEST ARTICLES
-========================= -->
+<!-- ARTICLES -->
 
 <section class="section">
 
   <div class="section-title">
-    <span>04</span>
+    <span>03</span>
     <h2>Latest Articles</h2>
   </div>
 
@@ -406,49 +574,17 @@ title: Home
     <a href="{{ post.url | relative_url }}"
        class="article">
 
-      <div class="article-meta">
+      <div>
 
         <span class="article-date">
           {{ post.date | date: "%Y.%m.%d" }}
         </span>
 
-        {% if post.categories.size > 0 %}
-
-        <span class="article-category">
-          {{ post.categories | first }}
-        </span>
-
-        {% endif %}
+        <h3>{{ post.title }}</h3>
 
       </div>
 
-
-      <div class="article-content">
-
-        <h3>
-          {{ post.title }}
-        </h3>
-
-        {% if post.description %}
-
-        <p>
-          {{ post.description }}
-        </p>
-
-        {% elsif post.excerpt %}
-
-        <p>
-          {{ post.excerpt | strip_html | truncate: 120 }}
-        </p>
-
-        {% endif %}
-
-      </div>
-
-
-      <div class="article-arrow">
-        →
-      </div>
+      <span class="article-arrow">→</span>
 
     </a>
 
@@ -456,134 +592,12 @@ title: Home
 
   </div>
 
-
   {% else %}
 
-  <div class="empty-posts">
-
-    <p>
-      Technical articles coming soon.
-    </p>
-
-  </div>
-
-  {% endif %}
-
-</section>
-
-
-<!-- =========================
-     TECH STACK
-========================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    <span>05</span>
-    <h2>Tech Stack</h2>
-  </div>
-
-
-  <div class="tech-stack">
-
-    <div class="tech-group">
-
-      <span class="tech-title">
-        NETWORK
-      </span>
-
-      <div class="tech-items">
-        <span>BGP</span>
-        <span>OSPF</span>
-        <span>VXLAN</span>
-        <span>EVPN</span>
-        <span>MPLS</span>
-        <span>vPC</span>
-        <span>LACP</span>
-      </div>
-
-    </div>
-
-
-    <div class="tech-group">
-
-      <span class="tech-title">
-        PLATFORM
-      </span>
-
-      <div class="tech-items">
-        <span>Cisco Nexus</span>
-        <span>ACI</span>
-        <span>IOS XE</span>
-        <span>IOS XR</span>
-      </div>
-
-    </div>
-
-
-    <div class="tech-group">
-
-      <span class="tech-title">
-        AUTOMATION
-      </span>
-
-      <div class="tech-items">
-        <span>Python</span>
-        <span>REST API</span>
-        <span>NETCONF</span>
-        <span>RESTCONF</span>
-      </div>
-
-    </div>
-
-
-    <div class="tech-group">
-
-      <span class="tech-title">
-        OBSERVABILITY
-      </span>
-
-      <div class="tech-items">
-        <span>Grafana</span>
-        <span>Prometheus</span>
-        <span>Telegraf</span>
-        <span>Telemetry</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FOOT CTA
-========================= -->
-
-<section class="home-footer">
-
-  <p class="home-footer-label">
-    NETWORK ENGINEERING
+  <p style="color:#777;">
+    Technical articles coming soon.
   </p>
 
-  <h2>
-    Explore the projects<br>
-    and technical notes.
-  </h2>
-
-  <div class="hero-actions">
-
-    <a href="{{ '/projects/' | relative_url }}"
-       class="button primary">
-      Projects
-    </a>
-
-    <a href="{{ '/about/' | relative_url }}"
-       class="button secondary">
-      About
-    </a>
-
-  </div>
+  {% endif %}
 
 </section>
