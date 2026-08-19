@@ -3,74 +3,100 @@ layout: default
 title: Home
 ---
 
-<div class="hero">
-  <p class="hero-label">NETWORK ENGINEER</p>
+<section class="hero">
 
-  <h1>Network Engineering</h1>
+  <div class="hero-badge">
+    NETWORK ENGINEER
+  </div>
+
+  <h1>
+    Building Reliable<br>
+    <span>Network Infrastructure.</span>
+  </h1>
 
   <p class="hero-description">
-    Data Center · Service Provider Network · Automation
+    Data Center · Service Provider · Network Automation
   </p>
 
-  <p class="hero-sub">
-    Network architecture, troubleshooting, validation and automation.
+  <p class="hero-text">
+    Architecture, troubleshooting, validation and automation
+    for modern network infrastructure.
   </p>
 
-  <div class="hero-buttons">
-    <a href="/projects/" class="btn-primary">View Projects</a>
-    <a href="https://github.com/w2jay" class="btn-secondary" target="_blank">GitHub</a>
+  <div class="hero-actions">
+    <a href="/projects/" class="button primary">
+      View Projects
+    </a>
+
+    <a href="https://github.com/w2jay"
+       target="_blank"
+       class="button secondary">
+      GitHub
+    </a>
   </div>
-</div>
 
-
-<hr>
+</section>
 
 
 <section class="section">
 
-  <h2>Areas of Interest</h2>
+  <div class="section-title">
+    <span>01</span>
+    <h2>Areas of Interest</h2>
+  </div>
 
-  <div class="topic-grid">
+  <div class="cards">
 
-    <div class="topic-card">
+    <div class="card">
+      <div class="card-number">01</div>
       <h3>Routing & Switching</h3>
       <p>
-        BGP, OSPF, STP, HSRP, VRRP and enterprise routing architectures.
+        BGP, OSPF, STP, HSRP, VRRP and routing architecture.
       </p>
     </div>
 
-    <div class="topic-card">
-      <h3>Data Center Network</h3>
+    <div class="card">
+      <div class="card-number">02</div>
+      <h3>Data Center</h3>
       <p>
-        Cisco Nexus, vPC, ACI and highly available data center architectures.
+        Cisco Nexus, vPC, ACI and highly available
+        data center architectures.
       </p>
     </div>
 
-    <div class="topic-card">
+    <div class="card">
+      <div class="card-number">03</div>
       <h3>VXLAN EVPN</h3>
       <p>
-        BGP EVPN control plane, VXLAN fabric and Multi-Site architecture.
+        BGP EVPN control plane, VXLAN Fabric
+        and Multi-Site architecture.
       </p>
     </div>
 
-    <div class="topic-card">
-      <h3>Network Automation</h3>
+    <div class="card">
+      <div class="card-number">04</div>
+      <h3>Automation</h3>
       <p>
-        Python, REST API, NETCONF, RESTCONF and infrastructure automation.
+        Python, REST API, NETCONF, RESTCONF
+        and network automation.
       </p>
     </div>
 
-    <div class="topic-card">
-      <h3>Monitoring</h3>
+    <div class="card">
+      <div class="card-number">05</div>
+      <h3>Observability</h3>
       <p>
-        Telemetry, Prometheus, Grafana and network observability.
+        Telemetry, Prometheus, Grafana
+        and infrastructure monitoring.
       </p>
     </div>
 
-    <div class="topic-card">
+    <div class="card">
+      <div class="card-number">06</div>
       <h3>Troubleshooting</h3>
       <p>
-        Packet analysis, failure reproduction and systematic root-cause analysis.
+        Packet analysis, failure reproduction
+        and root-cause analysis.
       </p>
     </div>
 
@@ -81,44 +107,95 @@ title: Home
 
 <section class="section">
 
-  <div class="section-header">
+  <div class="section-title">
+    <span>02</span>
     <h2>Selected Projects</h2>
-    <a href="/projects/">View all →</a>
   </div>
 
-  <div class="project-list">
+  <div class="projects">
 
-    <a href="/posts/vxlan-evpn/" class="project-item">
-      <div>
-        <span class="project-number">01</span>
+    <a href="/posts/vxlan-evpn/" class="project">
+
+      <div class="project-index">
+        01
+      </div>
+
+      <div class="project-content">
         <h3>VXLAN EVPN Multi-Site</h3>
+
         <p>
-          Multi-Site architecture and BGP EVPN control-plane validation.
+          Architecture design and BGP EVPN
+          control-plane validation.
         </p>
+
+        <div class="tags">
+          <span>VXLAN</span>
+          <span>EVPN</span>
+          <span>BGP</span>
+          <span>Nexus</span>
+        </div>
       </div>
-      <span class="project-arrow">→</span>
+
+      <div class="project-arrow">
+        ↗
+      </div>
+
     </a>
 
-    <a href="/posts/vpc-lacp/" class="project-item">
-      <div>
-        <span class="project-number">02</span>
+
+    <a href="/posts/vpc-lacp/" class="project">
+
+      <div class="project-index">
+        02
+      </div>
+
+      <div class="project-content">
         <h3>vPC / LACP Failure Analysis</h3>
+
         <p>
-          Failure scenarios involving vPC, LACP System ID and timer behavior.
+          Failure reproduction and analysis
+          of LACP System-ID and timer behavior.
         </p>
+
+        <div class="tags">
+          <span>vPC</span>
+          <span>LACP</span>
+          <span>Troubleshooting</span>
+        </div>
       </div>
-      <span class="project-arrow">→</span>
+
+      <div class="project-arrow">
+        ↗
+      </div>
+
     </a>
 
-    <a href="/posts/network-monitoring/" class="project-item">
-      <div>
-        <span class="project-number">03</span>
-        <h3>Network Monitoring Stack</h3>
-        <p>
-          Network telemetry and monitoring using Telegraf, Prometheus and Grafana.
-        </p>
+
+    <a href="/posts/network-monitoring/" class="project">
+
+      <div class="project-index">
+        03
       </div>
-      <span class="project-arrow">→</span>
+
+      <div class="project-content">
+        <h3>Network Observability Stack</h3>
+
+        <p>
+          Monitoring network infrastructure using
+          Telegraf, Prometheus and Grafana.
+        </p>
+
+        <div class="tags">
+          <span>Telemetry</span>
+          <span>Grafana</span>
+          <span>Prometheus</span>
+        </div>
+      </div>
+
+      <div class="project-arrow">
+        ↗
+      </div>
+
     </a>
 
   </div>
@@ -128,27 +205,32 @@ title: Home
 
 <section class="section">
 
-  <div class="section-header">
+  <div class="section-title">
+    <span>03</span>
     <h2>Latest Articles</h2>
   </div>
 
-  <div class="post-list">
+  <div class="articles">
 
     {% for post in site.posts limit:5 %}
 
-      <a href="{{ post.url | relative_url }}" class="post-item">
+    <a href="{{ post.url | relative_url }}" class="article">
 
-        <div>
-          <span class="post-date">
-            {{ post.date | date: "%Y.%m.%d" }}
-          </span>
+      <div>
+        <span class="article-date">
+          {{ post.date | date: "%Y.%m.%d" }}
+        </span>
 
-          <h3>{{ post.title }}</h3>
-        </div>
+        <h3>
+          {{ post.title }}
+        </h3>
+      </div>
 
-        <span>→</span>
+      <span class="article-arrow">
+        →
+      </span>
 
-      </a>
+    </a>
 
     {% endfor %}
 
