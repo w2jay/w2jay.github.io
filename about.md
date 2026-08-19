@@ -405,17 +405,7 @@ body {
 
     <div class="skill-card">
       <span>PLATFORM</span>
-      <h3>Cisco Nexus / Catalyst / ACI</h3>
-    </div>
-
-    <div class="skill-card">
-      <span>REDUNDANCY</span>
-      <h3>vPC / LACP / STP</h3>
-    </div>
-
-    <div class="skill-card">
-      <span>FABRIC</span>
-      <h3>VXLAN EVPN / Multi-Site</h3>
+      <h3>Cisco Nexus / Catalyst</h3>
     </div>
 
     <div class="skill-card">
@@ -553,10 +543,9 @@ body {
 
   <div class="topic-tags">
 
-    <span>VXLAN EVPN</span>
-    <span>BGP Troubleshooting</span>
-    <span>vPC / LACP</span>
-    <span>Cisco ACI</span>
+    <span>Routing & Switching</span>
+    <span>Data Center</span>
+    <span>SDN</span>
     <span>Network Automation</span>
     <span>Monitoring & Telemetry</span>
     <span>Network Design</span>
